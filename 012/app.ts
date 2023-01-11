@@ -8,6 +8,10 @@ const user = {
   lastName: 'Ampilov',
   city: 'Samarqand',
   age: 37,
+  skills: {
+    ts: true,
+    php: true,
+  },
 };
 
 
