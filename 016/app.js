@@ -6,4 +6,4 @@ console.log(skill16);
 // skill16[1] = 'TypeScript';
 console.log(skill16);
 const skills16 = ['5', 'Bitrix'];
-skills16[0] = '';
+// skills16[0] = '';
