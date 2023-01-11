@@ -18,4 +18,3 @@ action(StatusCode.REJECTED);
 action(-2);
 action(3);
 action(4);
-action('asd');

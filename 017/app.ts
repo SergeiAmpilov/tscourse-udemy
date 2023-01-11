@@ -25,3 +25,7 @@ action(4);
 // action('asd');
 
 
+const enum Roles {
+  ADMIN = 1,
+  USER = 2,
+}
