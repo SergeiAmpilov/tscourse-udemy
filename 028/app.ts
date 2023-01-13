@@ -22,10 +22,13 @@ try {
 } catch(error) {
 
   const e27: Error = error as Error;
-  
+
   /*
   if (error instanceof Error) {
     console.log(error.message);
   }
   */
 }
+
+type U27 = unknown | string;
+type I27 = unknown & string;
