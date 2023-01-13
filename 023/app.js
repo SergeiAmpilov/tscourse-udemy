@@ -6,5 +6,7 @@ const U22 = {
     skills: [
         'kata', 'typescript'
     ],
-    id: 123
+    id: 123,
+    createdAt: new Date(),
+    log: id => "",
 };
