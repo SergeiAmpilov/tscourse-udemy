@@ -13,9 +13,4 @@ try {
 }
 catch (error) {
     const e27 = error;
-    /*
-    if (error instanceof Error) {
-      console.log(error.message);
-    }
-    */
 }

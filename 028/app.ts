@@ -15,19 +15,12 @@ if (typeof input28 === 'number') {
   input28++;
 }
 
-
-
 try {
 
 } catch(error) {
 
   const e27: Error = error as Error;
 
-  /*
-  if (error instanceof Error) {
-    console.log(error.message);
-  }
-  */
 }
 
 type U27 = unknown | string;
