@@ -19,3 +19,12 @@ function processPayment(action) {
             break;
     }
 }
+function isString(x) {
+    if (typeof x === 'string') {
+        return true;
+    }
+    else if (typeof x === 'number') {
+        return false;
+    }
+    generateError('no such type');
+}
