@@ -3,7 +3,7 @@
 ;
 function findUser() {
     if (Math.random() > .5) {
-        return;
+        return null;
     }
     else {
         return {
@@ -12,4 +12,8 @@ function findUser() {
     }
 }
 const u30 = findUser();
-const name30 = u30 === null || u30 === void 0 ? void 0 : u30.name;
+// const name30 = u30?.name;
+// const name30 = u30?.name;
+if (u30) {
+    const name30 = u30.name;
+}
