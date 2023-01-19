@@ -6,10 +6,12 @@ var PaymentStatus37;
     PaymentStatus37["Reverse"] = "reverse";
 })(PaymentStatus37 || (PaymentStatus37 = {}));
 class Payment37 {
+    ;
+    ;
     constructor(id) {
-        this.id = id;
-        this.createdAt = new Date();
         this.status = PaymentStatus37.Hold;
+        this.createdAt = new Date();
+        this.id = id;
     }
     getPaymentLifeTime() {
         return new Date().getTime() - this.createdAt.getTime();
