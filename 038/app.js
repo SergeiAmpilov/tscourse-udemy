@@ -19,3 +19,4 @@ U_38.addSkill('Bitrix');
 console.log(U_38);
 U_38.addSkill(['PHP', 'Typescript']);
 console.log(U_38);
+U_38.addSkill;
