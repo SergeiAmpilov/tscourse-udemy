@@ -3,9 +3,21 @@ class Vehicle44 {
   private damages: string[];
   private _model: string;
   protected run: number;
+  #price: number; /* private js */
 
   constructor() {
     this.damages = ['--'];
+    this.#price = 110;
+  }
+
+  showPrice(): number {
+    return this.#price;
+  }
+
+  isPriceEqual(v: Vehicle44): boolean {
+    v.#price += 1000;
+    return this.#price === v.#price;
+
   }
 
   addDamage(d: string) {
@@ -28,7 +40,13 @@ class EuroTruck44 extends Vehicle44 {
   }
 } 
 
+const v44_1 = new Vehicle44();
+const v44_2 = new Vehicle44();
+console.log(v44_1.showPrice(), v44_2.showPrice());
+console.log(v44_1.isPriceEqual(v44_2));
+console.log(v44_1.showPrice(), v44_2.showPrice());
 
+/*
 const vh44 = new Vehicle44();
 vh44.make = ' vw';
 vh44.addDamage('corrupt');
@@ -40,3 +58,4 @@ console.log(vh44);
 const tr44 = new EuroTruck44();
 // tr44.
 console.log(tr44);
+*/
