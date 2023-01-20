@@ -3,20 +3,35 @@ enum DeliveryType45 {
   PickUp = 'PickUp'
 }
 
-type HomeDelivery = {
-  date: Date,
-  adress: string,
+class HomeDelivery {
+  date: Date;
+  adress: string;
+
+  constructor(date: Date, adress: string) {
+    this.date = date;
+    this.adress = adress;
+  }
 };
 
-type PickUpDelivery = {
-  date: Date,
-  pickUpPointId: number,
+class PickUpDelivery {
+  date: Date = new Date();
+  pickUpPointId: number;
+
+  constructor(id: number) {
+    this.pickUpPointId = id;
+  }
 };
 
 class Product45 {
   id: number;
   name: string;
   price: number;
+
+  constructor(name: string, price: number) {
+    this.id = 1;
+    this.name = name;
+    this.price = price;
+  }
 }
 
 class PickUpPoint45 {
@@ -51,16 +66,12 @@ class Cart45 {
   }
 
   setDelivery(type: DeliveryType45, date: Date, adrOrId: number | string): void {
-    if (type == DeliveryType45.Home) {
-      this.delivery = {
-        adress: typeof adrOrId === 'string' ? adrOrId : '',
-        date: date
-      }
+    
+    if (type == DeliveryType45.Home ) {
+      this.delivery = new HomeDelivery(date, 
+        typeof adrOrId === 'string' ? adrOrId : '');
     } else  {
-      this.delivery = {
-        date: new Date(),
-        pickUpPointId: typeof adrOrId === 'number' ? adrOrId : 0,
-      }
+      this.delivery = new PickUpDelivery(typeof adrOrId === 'number' ? adrOrId : 0);
     }
   }
 

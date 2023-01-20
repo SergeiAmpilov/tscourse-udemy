@@ -4,7 +4,26 @@ var DeliveryType45;
     DeliveryType45["Home"] = "Home";
     DeliveryType45["PickUp"] = "PickUp";
 })(DeliveryType45 || (DeliveryType45 = {}));
+class HomeDelivery {
+    constructor(date, adress) {
+        this.date = date;
+        this.adress = adress;
+    }
+}
+;
+class PickUpDelivery {
+    constructor(id) {
+        this.date = new Date();
+        this.pickUpPointId = id;
+    }
+}
+;
 class Product45 {
+    constructor(name, price) {
+        this.id = 1;
+        this.name = name;
+        this.price = price;
+    }
 }
 class PickUpPoint45 {
 }
@@ -25,16 +44,10 @@ class Cart45 {
     }
     setDelivery(type, date, adrOrId) {
         if (type == DeliveryType45.Home) {
-            this.delivery = {
-                adress: typeof adrOrId === 'string' ? adrOrId : '',
-                date: date
-            };
+            this.delivery = new HomeDelivery(date, typeof adrOrId === 'string' ? adrOrId : '');
         }
         else {
-            this.delivery = {
-                date: new Date(),
-                pickUpPointId: typeof adrOrId === 'number' ? adrOrId : 0,
-            };
+            this.delivery = new PickUpDelivery(typeof adrOrId === 'number' ? adrOrId : 0);
         }
     }
     checkOut() {
