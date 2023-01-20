@@ -25,8 +25,6 @@ class Users43 extends Array<User43> {
 
 }
 
-// new User43('pa-rr').name;
-// new Users43().red
 
 const us43 = new Users43();
 
@@ -36,14 +34,32 @@ us43.push(new User43('Kolia'));
 us43.push(new User43('Sveta'));
 us43.push(new User43('Vasia'));
 us43.push(new User43('Vasia'));
-us43.show();
-console.log(us43.toString());
-console.log(
-  us43.searchByName('Sveta')
-);
-console.log(
-  us43.searchByName('Vasia')
-);
-console.log(
-  us43.searchByName('Sergei')
-);
+// us43.show();
+// console.log(us43.toString());
+// console.log(
+//   us43.searchByName('Sveta')
+// );
+// console.log(
+//   us43.searchByName('Vasia')
+// );
+// console.log(
+//   us43.searchByName('Sergei')
+// );
+
+
+///////
+
+class Payment43 {
+  sum: number;
+  date: Date;
+}
+
+class UserWithPayment43 {
+  user: User43;
+  payment: Payment43;
+
+  constructor(user: User43, payment: Payment43) {
+    this.user = user;
+    this.payment = payment;
+  }
+}
