@@ -19,8 +19,8 @@ const user47 = {
     // payDate: dd47.getDate,
     payDateArrow: dd47.getDateArrow,
 };
-// console.log(user47.payDate());
-// console.log(user47.payDateArrow());
+console.log(user47.payDate());
+console.log(user47.payDateArrow());
 /////
 class PaymentPersistent47 extends Payment47 {
     save() {

@@ -21,8 +21,8 @@ const user47 = {
   payDateArrow: dd47.getDateArrow,
 };
 
-// console.log(user47.payDate());
-// console.log(user47.payDateArrow());
+console.log(user47.payDate());
+console.log(user47.payDateArrow());
 
 
 /////
