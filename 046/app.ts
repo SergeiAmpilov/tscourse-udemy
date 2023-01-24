@@ -7,9 +7,9 @@ class UserService46 {
   }
 
   static getUser(id:number): number {
-    UserService46.db;
-    UserService46.user;
-    UserService46.getUser(1);
+    // UserService46.db;
+    // UserService46.user;
+    // UserService46.getUser(1);
     return 1;
   }
 
@@ -20,3 +20,4 @@ class UserService46 {
 
 UserService46.db;
 UserService46.getUser(3);
+console.log(UserService46.name);
