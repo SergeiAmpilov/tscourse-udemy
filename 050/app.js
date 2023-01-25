@@ -1,7 +1,7 @@
 "use strict";
 class Logger {
-    printDate() {
-        this.log(`${new Date()}`);
+    printDate(date) {
+        this.log(date.toString());
     }
 }
 class RealLogger extends Logger {
@@ -9,7 +9,7 @@ class RealLogger extends Logger {
         console.log(message);
     }
     logWithDate(message) {
-        this.printDate();
+        this.printDate(new Date());
         this.log(message);
     }
 }

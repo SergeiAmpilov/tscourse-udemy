@@ -1,8 +1,8 @@
 abstract class Logger {
   abstract log(message: string): void;
 
-  printDate(): void {
-    this.log(`${new Date()}`);
+  printDate(date: Date): void {
+    this.log(date.toString());
   }
 }
 
@@ -13,7 +13,7 @@ class RealLogger extends Logger {
   }
 
   logWithDate(message: string): void {
-    this.printDate();
+    this.printDate(new Date());
     this.log(message);
   }  
 }
