@@ -15,3 +15,5 @@ class RealLogger extends Logger {
 }
 const l50 = new RealLogger;
 l50.logWithDate('hello world');
+new RealLogger().log('one more');
+new RealLogger().logWithDate('any more');
