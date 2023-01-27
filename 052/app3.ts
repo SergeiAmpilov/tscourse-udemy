@@ -1,0 +1,1 @@
+const b52: number = 5;
