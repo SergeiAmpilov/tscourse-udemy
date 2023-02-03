@@ -22,9 +22,8 @@ interface IGroup<T> {
 
 function groupByKey<T extends Record<string, any>>(arObj: T[], key: keyof T): IGroup<T> {
 
-  const res: {string: T[]} = {
-    string: []
-  };
+  let res: IGroup<T> = {};
+
   arObj.map( (el) => {
     
     const locKey = el[key];

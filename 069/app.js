@@ -8,7 +8,7 @@ const data = [
     { group: 1, name: 'Sveta' },
 ];
 function groupByKey(arObj, key) {
-    const res = {};
+    let res = {};
     arObj.map((el) => {
         const locKey = el[key];
         if (!res[locKey]) {
