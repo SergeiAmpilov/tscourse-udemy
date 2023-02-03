@@ -16,8 +16,16 @@ function convertRun<T extends Vehicle63>(vehicle: T): T {
 const vh63 = new TruchVehicle63();
 vh63.run = 62_000;
 convertRun<TruchVehicle63>(vh63);
-// convertRun(vh63);
 
 console.log(
   vh63
 );
+
+
+function logId63<T extends number | string, Y>(id: T, additionalData: Y): { id: T,  data: Y } {
+  console.log(id, additionalData);
+  return {
+    id,
+    data: additionalData,
+  }
+}

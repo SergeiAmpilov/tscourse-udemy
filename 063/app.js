@@ -10,5 +10,11 @@ function convertRun(vehicle) {
 const vh63 = new TruchVehicle63();
 vh63.run = 62000;
 convertRun(vh63);
-// convertRun(vh63);
 console.log(vh63);
+function logId63(id, additionalData) {
+    console.log(id, additionalData);
+    return {
+        id,
+        data: additionalData,
+    };
+}
