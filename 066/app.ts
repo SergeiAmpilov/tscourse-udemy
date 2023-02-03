@@ -7,9 +7,14 @@ class List {
   }
 }
 
+class Accordion {
+  isOpened: boolean;
+}
+
 
 
 type ListType = GConstructor<List>;
+type AccordionType = GConstructor<Accordion>;
 
 class ExtendedListClass extends List {
   first() {
@@ -17,15 +22,27 @@ class ExtendedListClass extends List {
   }
 }
 
-function ExtendedList<TBase extends ListType>(Base: TBase) {
+class AccordionList {
+  public isOpened: boolean;
+  constructor(public items: string[]) {
+    this.isOpened = false;
+  }
+}
+
+function ExtendedList<TBase extends ListType & AccordionType>(Base: TBase) {
   return class ExtendedList extends Base {
     first() {
+      this.isOpened = true;
       return this.items[0];
     }
   }
 }
 
-const list = ExtendedList(List);
+const list = ExtendedList(AccordionList);
 const ls66 = new list(['ol', 'ul', 'nav']);
-console.log(list);
-console.log(ls66, ls66.items, ls66.first());
+// console.log(list);
+console.log(ls66);
+console.log(ls66.first());
+console.log(ls66);
+
+// console.log(ls66, ls66.items, ls66.first(), ls66);
