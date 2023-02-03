@@ -13,7 +13,13 @@ interface ILogDate<T> {
   data: T
 }
 
-const logLine: ILogDate<{ a: number }> = {
+
+type ILogDateType<T> = {
+  timeStamp: Date,
+  data: T
+}
+
+const logLine: ILogDateType<{ a: number }> = {
   timeStamp: new Date(),
   data: {
     a: 1,
