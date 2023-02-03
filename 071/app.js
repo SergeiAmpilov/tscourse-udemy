@@ -8,3 +8,4 @@ const user71 = {
     ]
 };
 const userName = user71['name'];
+const roles71 = ['admin', 'user', 'editor'];

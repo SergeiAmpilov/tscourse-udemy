@@ -18,6 +18,11 @@ const user71: User71 = {
 
 
 const userName = user71['name'];
-type roleType = User71['roles'];
+type rolesType = User71['roles'];
 
 
+type roleType = User71['roles'][number];
+
+
+const roles71 = ['admin', 'user', 'editor'] as const;
+type rolesTypeNew = typeof roles71[number];
